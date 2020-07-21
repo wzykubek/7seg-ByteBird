@@ -14,7 +14,7 @@ def read(filename):
 
 setup(
     name="7seg-ByteBird",
-    version="0.1",
+    version="0.1.1",
     author="samedamci",
     author_email="samedamci@disroot.org",
     description=(

@@ -90,7 +90,7 @@ def handle_movements():
 
 def main():
     screen.write_blinking_text(' ' + '.'*5, stop_after=2)
-    _ = Thread(target=handle_movements, daemon=True).start()
+    Thread(target=handle_movements, daemon=True).start()
     i = 1
 
     while True:
@@ -105,7 +105,7 @@ def main():
         if i != ctx.hero_index:
             draw_hurdles(ctx.hurdles[0], i)
 
-        draw_hero(ctx.hero_position)  # Restore hero on prevous position.
+        draw_hero(ctx.hero_position)  # Restore hero on previous position.
 
         if i > 4:
             draw_hurdles(ctx.hurdles[1], i - 3)
