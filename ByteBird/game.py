@@ -107,14 +107,14 @@ def main():
 
         draw_hero(ctx.hero_position)  # Restore hero on previous position.
 
-        if i > 4:
+        if i >= 4:
             draw_hurdles(ctx.hurdles[1], i - 3)
             if i == ctx.hero_index:
                 if not (draw_hero(ctx.hero_position, ctx.hurdles[0])):
                     break
 
         if ctx.points > 0:
-            if i < 3:
+            if i < 4:
                 if (ctx.hero_index - 1) + i == ctx.hero_index:
                     if not (draw_hero(ctx.hero_position, ctx.hurdles[0])):
                         break
